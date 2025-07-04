@@ -220,3 +220,4 @@ C:\Users\paulo\source\repos\ProjetoTarefas\obj\Debug\net9.0\ProjetoTarefas.pdb
 C:\Users\paulo\source\repos\ProjetoTarefas\obj\Debug\net9.0\ProjetoTarefas.genruntimeconfig.cache
 C:\Users\paulo\source\repos\ProjetoTarefas\obj\Debug\net9.0\ref\ProjetoTarefas.dll
 C:\Users\paulo\source\repos\ProjetoTarefas\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\paulo\source\repos\ProjetoTarefas\obj\Debug\net9.0\ProjetoTarefas.sourcelink.json

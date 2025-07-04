@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v9.0": {
       "ProjetoTarefas/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.6",
+          "Microsoft.EntityFrameworkCore.Design": "9.0.6",
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.6"
         },

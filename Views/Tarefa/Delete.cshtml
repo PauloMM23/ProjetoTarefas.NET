@@ -1,0 +1,17 @@
+﻿@model ProjetoTarefas.Models.Tarefa
+@{
+    ViewData["Title"] = "Excluir Tarefa";
+}
+
+<h2>Confirmar Exclusão</h2>
+
+<div class="alert alert-danger">
+    Deseja realmente excluir a tarefa <strong>@Model.Titulo</strong>?
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="ProjetoId" />
+    <button type="submit" class="btn btn-danger">Sim, excluir</button>
+    <a asp-controller="Projeto" asp-action="Details" asp-route-id="@Model.ProjetoId" class="btn btn-secondary">Cancelar</a>
+</form>

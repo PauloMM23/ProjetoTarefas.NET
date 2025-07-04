@@ -1,0 +1,44 @@
+﻿@model ProjetoTarefas.Models.Projeto
+@{
+    ViewData["Title"] = "Detalhes do Projeto";
+}
+
+<h2>@Model.Nome</h2>
+<p><strong>Cliente:</strong> @Model.Cliente</p>
+<p><strong>Início:</strong> @Model.DataInicio.ToShortDateString()</p>
+<p><strong>Término:</strong> @(Model.DataTermino?.ToShortDateString() ?? "-")</p>
+
+<a asp-action="Index" class="btn btn-outline-secondary">Voltar</a>
+<a asp-controller="Tarefa" asp-action="Create" asp-route-projetoId="@Model.Id" class="btn btn-success">Nova Tarefa</a>
+
+<h4 class="mt-4">Tarefas</h4>
+
+@if (Model.Tarefas.Any())
+{
+    <table class="table table-bordered table-sm">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Status</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tarefa in Model.Tarefas)
+            {
+                <tr>
+                    <td>@tarefa.Titulo</td>
+                    <td>@tarefa.Status</td>
+                    <td>
+                        <a asp-controller="Tarefa" asp-action="Edit" asp-route-id="@tarefa.Id" class="btn btn-sm btn-warning">Editar</a>
+                        <a asp-controller="Tarefa" asp-action="Delete" asp-route-id="@tarefa.Id" class="btn btn-sm btn-danger">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Não há tarefas cadastradas para este projeto.</p>
+}
